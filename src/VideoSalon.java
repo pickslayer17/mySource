@@ -1,12 +1,10 @@
-import javax.sound.midi.Soundbank;
+
 import java.io.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class VideoSalon {
     File videoTapesFile;
@@ -31,17 +29,15 @@ public class VideoSalon {
 
             String filmName = lineElements[0].trim();
             boolean isAvailable = Boolean.parseBoolean(lineElements[1].trim());
-            String clientName = "";
-            LocalDateTime rentDate=null;
+            String clientName = lineElements[2].trim();
+            LocalDateTime rentDate;
+            try{
+                rentDate = LocalDateTime.parse(lineElements[3].trim());
+            } catch (DateTimeParseException exception) {
+                exception.printStackTrace();
+                rentDate = LocalDateTime.of(2012, 12,12,00,00);
+            }
 
-//            if(!isAvailable) {
-                clientName = lineElements[2].trim();
-                try{
-                    rentDate = LocalDateTime.parse(lineElements[3].trim());
-                } catch (DateTimeParseException exception) {
-                    exception.printStackTrace();
-                }
-//            }
             videoTapeList.add(new VideoTape(filmName,isAvailable, clientName, rentDate));
         }
     }
@@ -50,7 +46,7 @@ public class VideoSalon {
     public void showAvailableVideoTapes() {
         for(VideoTape videoTape : videoTapeList){
             if(videoTape.isAvailable()) {
-                System.out.println(videoTape.toString());
+                System.out.println(videoTape);
             }
         }
     }
@@ -58,7 +54,7 @@ public class VideoSalon {
     public void showRentVideoTapes() {
         for(VideoTape videoTape : videoTapeList){
             if(!videoTape.isAvailable()) {
-                System.out.println(videoTape.toString());
+                System.out.println(videoTape);
             }
         }
     }

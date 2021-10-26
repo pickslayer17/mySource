@@ -1,5 +1,5 @@
-Terminator*true**2021-08-26T00:00:00.999481100
-Robocop*true*Ilya*2021-10-26T16:35:45.279527800
-Ulici Razbitih Fonarei*true**2021-08-26T00:00:00.999481100
+Terminator*true*Oleg*2021-08-26T00:00:00.999481100
+Robocop*true*Denis*2021-10-26T16:41:43.759303100
+Ulici Razbitih Fonarei*true*Oleg*2021-08-26T00:00:00.999481100
 X-men*false*Denis*2021-10-26T16:37:44.772281100
-Terminator*true**2021-08-26T00:00:00.999481100
+Terminator*true*Oleg*2021-08-26T00:00:00.999481100
