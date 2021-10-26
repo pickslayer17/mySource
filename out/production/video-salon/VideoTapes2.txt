@@ -1,0 +1,4 @@
+Terminator   *true**
+Robocop   *true**
+Ulici Razbitih Fonarei   *false*   Andrei   *2021-10-23T15:00
+X-men   *true**
