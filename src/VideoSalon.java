@@ -34,14 +34,14 @@ public class VideoSalon {
             String clientName = "";
             LocalDateTime rentDate=null;
 
-            if(!isAvailable) {
+//            if(!isAvailable) {
                 clientName = lineElements[2].trim();
                 try{
                     rentDate = LocalDateTime.parse(lineElements[3].trim());
                 } catch (DateTimeParseException exception) {
                     exception.printStackTrace();
                 }
-            }
+//            }
             videoTapeList.add(new VideoTape(filmName,isAvailable, clientName, rentDate));
         }
     }
