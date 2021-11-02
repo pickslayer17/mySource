@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class VideoSalonApp {
 
-    public final static String VIDEO_TAPES_FILE_NAME = "src/VideoTapes.txt";
+    public final static String VIDEO_TAPES_FILE_NAME = "VideoTapes.txt";
 
     public static void main(String[] args) throws FileNotFoundException {
 
@@ -18,8 +18,9 @@ public class VideoSalonApp {
         Scanner userInputScanner = new Scanner(System.in);
         while(true) {
 
-            int userAction = userInputScanner.nextInt();
+//            int userAction = userInputScanner.nextInt();
             Scanner userInputSwitch = new Scanner(System.in);
+            int userAction = 5;
             switch (userAction) {
                 case 1:
                     System.out.println("-------Show Available------");
